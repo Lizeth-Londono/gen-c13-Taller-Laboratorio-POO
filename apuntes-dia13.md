@@ -52,3 +52,41 @@ Este objeto fue creado con la estructura definida en la función constructora Ma
 La ventaja técnica de usar un método interno dentro de la función constructora es que cada objeto puede acceder a sus propias propiedades usando this y esto permite que cada mascota tenga sus datos y también un comportamiento propio, sin tener que crear una función externa diferente para cada una.
 
 En este ejercicio aprendí que un objeto no solo puede guardar información, sino también ejecutar acciones relacionadas con esa información y entendí que this permite que el método acceda de forma precisa a las propiedades del objeto que lo está usando.
+
+
+
+## Ejercicio 3: Lógica de negocio automática en una plataforma de cursos
+
+En este ejercicio trabajé un caso de una plataforma educativa que necesita procesar las notas de los estudiantes y determinar automáticamente si cada estudiante aprobó o reprobó.
+
+Entonces el objetivo era que cada estudiante tuviera sus propios datos y que el mismo objeto pudiera conocer su estado académico según la nota obtenida y para resolverlo, usé una función constructora llamada Estudiante.
+
+Una función constructora funciona como un molde que permite crear varios objetos con la misma estructura, pero con datos diferentes, entonces en este caso cada estudiante tiene las siguientes propiedades:
+
+nombre  
+curso  
+nota  
+aprobado  
+
+La propiedad aprobado es una propiedad calculada, porque no se escribe manualmente como true o false, sino que el programa la calcula automáticamente a partir de la nota del estudiante.
+
+La condición usada fue:
+
+this.aprobado = nota >= 3.0;
+
+Esto significa que si la nota del estudiante es mayor o igual a 3.0, la propiedad aprobado queda en true. Si la nota es menor a 3.0, la propiedad aprobado queda en false, entonces dentro de la función constructora también agregué un método llamado mostrarResultado.
+
+Este método usa this para acceder a las propiedades del mismo objeto como el nombre, el curso, la nota y si el estudiante aprobó o no.
+
+Luego creé cuatro estudiantes diferentes usando el operador new:
+
+estudiante1  
+estudiante2  
+estudiante3  
+estudiante4  
+
+Cada estudiante fue creado con un nombre, un curso y una nota diferente. Después ejecuté el método mostrarResultado() para cada uno, con el fin de mostrar en consola si aprobó o reprobó.
+
+En este ejercicio aprendí que un objeto no solo puede guardar datos, sino también tener lógica interna mediante métodos y propiedades calculadas y la ventaja de que el objeto conozca su propio estado lógico es que cada estudiante puede determinar si aprobó o reprobó sin tener que repetir la misma condición en varias partes del programa.
+
+Esto mejora la organización del código, evita repetir lógica y permite que cada objeto sea más autónomo.
