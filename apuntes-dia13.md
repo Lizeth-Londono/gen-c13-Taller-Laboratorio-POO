@@ -90,3 +90,42 @@ Cada estudiante fue creado con un nombre, un curso y una nota diferente. Despué
 En este ejercicio aprendí que un objeto no solo puede guardar datos, sino también tener lógica interna mediante métodos y propiedades calculadas y la ventaja de que el objeto conozca su propio estado lógico es que cada estudiante puede determinar si aprobó o reprobó sin tener que repetir la misma condición en varias partes del programa.
 
 Esto mejora la organización del código, evita repetir lógica y permite que cada objeto sea más autónomo.
+
+
+## Ejercicio 4: Control de estado modificado - Biblioteca
+
+En este ejercicio trabajé un caso de una biblioteca que necesita controlar correctamente la disponibilidad de sus libros dentro del catálogo y el objetivo era crear un objeto que pudiera cambiar su estado interno dependiendo de si el libro estaba prestado o disponible y para resolverlo, usé una función constructora llamada Libro.
+
+Esta función constructora representa el molde para crear libros con una misma estructura, entonces en este caso cada libro tiene las siguientes propiedades:
+
+titulo  
+autor  
+genero  
+ano  
+prestado  
+
+La propiedad prestado funciona como un estado interno del objeto y al inicio está en false, porque el libro todavía no ha sido prestado, entonces dentro de la función constructora también agregué dos métodos:
+
+prestar()  
+devolver()  
+
+El método prestar() revisa si el libro no está prestado y si prestado es false, cambia el estado a true y muestra un mensaje indicando que el libro fue prestado correctamente. Pero si el libro ya está prestado, muestra una alerta indicando que no se puede prestar nuevamente.
+
+El método devolver() hace el proceso contrario, el primero revisa si el libro está prestado y si esta prestado es true, cambia el estado a false y muestra un mensaje indicando que el libro fue devuelto correctamente, pero si el libro no estaba prestado, muestra un mensaje indicando que no se puede devolver porque no existe un préstamo activo.
+
+Después probé los dos métodos sobre el mismo libro para verificar los cambios de estado:
+
+Primero el libro inició con prestado en false.  
+Luego se prestó y su estado cambió a true.  
+Después intenté prestarlo otra vez y el programa mostró una alerta.  
+Luego se devolvió correctamente y el estado volvió a false.  
+Finalmente intenté devolverlo otra vez y el programa avisó que el libro no estaba prestado.
+
+También observé que al imprimir el objeto completo en consola aparecen los métodos como:
+
+[Function (anonymous)]
+
+Esto no es un error, pues JavaScript muestra eso porque prestar y devolver son funciones guardadas dentro del objeto y como no tienen un nombre propio, aparecen como funciones anónimas.
+
+En este ejercicio aprendí que un objeto no solo puede guardar información, sino también comportamientos que modifican su propio estado interno usando this.
+
