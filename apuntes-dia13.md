@@ -129,3 +129,22 @@ Esto no es un error, pues JavaScript muestra eso porque prestar y devolver son f
 
 En este ejercicio aprendí que un objeto no solo puede guardar información, sino también comportamientos que modifican su propio estado interno usando this.
 
+
+## Ejercicio 5: Registro interactivo de vehículos
+
+En este ejercicio trabajé un caso de un concesionario de vehículos que necesita registrar la información de los automóviles disponibles y el objetivo era crear un sistema más interactivo donde los datos del vehículo no quedaran escritos directamente en el código, sino que fueran ingresados por el usuario desde la terminal usando cuadros de diálogo con prompt.
+
+Para resolverlo, usé prompt-sync, que permite pedir información por teclado en Node.js.
+
+También creé una función constructora llamada Vehiculo y esta función funciona como un molde para crear vehículos con una misma estructura y en este caso cada vehículo tiene las siguientes propiedades:
+
+placa  
+marca  
+modelo  
+color  
+kilometraje  
+estado  
+
+Después solicité al usuario la información de tres vehículos diferentes y con esos datos creé objetos usando la palabra clave new, tambien agregué métodos dentro del objeto para representar acciones relacionadas con el vehículo y uno de los métodos permite mostrar la información del vehículo en consola y otros métodos permiten modificar propiedades como actualizar el kilometraje o cambiar el estado del vehículo.
+
+En este ejercicio aprendí que un programa puede ser más dinámico cuando la información la ingresa el usuario y también reforcé el uso de funciones constructoras, objetos, métodos, this, new y entrada de datos por teclado.
